@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/HTML&CSS/Day5/style/lab2.css'>
+
+</head>
+<body>
+    <h2>Browser Options Form</h2>
+
+<form id="browserOptionsForm">
+    <label for="browserName">Browser Name:</label>
+    <input type="text" id="browserName" name="browserName" required>
+
+    <label for="browserList">Select a Browser:</label>
+    <select id="browserList" name="browserList" required>
+        <!-- Options will be populated dynamically using JavaScript -->
+    </select>
+
+    <button type="button" onclick="addBrowser()">Add</button>
+    <button type="button" onclick="deleteBrowser()">Delete</button>
+</form>
+
+<script src='/HTML&CSS/Day5/scripts/lab2.js'></script>
+    
+</body>
+</html>

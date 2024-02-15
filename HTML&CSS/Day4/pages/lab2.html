@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lab2 - JS Field Validator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/HTML&CSS/Day4/style/lab2.css'>
+</head>
+<body>
+    
+    <div id="gameBox">Press Start</div>
+    <button onclick="startGame()">Start</button>
+    <button onclick="endGame()">End</button>
+
+    <script>
+        let timer;
+        let score = 0;
+        let mistakes = 0;
+        let misses = 0;
+
+        function startGame() {
+            score = 0;
+            mistakes = 0;
+            misses = 0;
+            document.getElementById('gameBox').innerText = "Get Ready!";
+            
+            setTimeout(() => {
+                document.getElementById('gameBox').innerText = "";
+                timer = setInterval(displayRandomLetter, 2000);
+            }, 1000);
+            
+            document.addEventListener('keydown', checkKeyPress);
+        }
+
+        function endGame() {
+            clearInterval(timer);
+            alert(`Game Over!\nScore: ${score}\nMistakes: ${mistakes}\nMisses: ${misses}`);
+
+            document.removeEventListener('keydown', checkKeyPress);
+        }
+
+        function displayRandomLetter() {
+            const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            const randomIndex = Math.floor(Math.random() * letters.length);
+            const randomLetter = letters.charAt(randomIndex);
+
+            document.getElementById('gameBox').innerText = randomLetter;
+
+            setTimeout(() => {
+                document.getElementById('gameBox').innerText = "";
+                misses++;
+            }, 500);
+        }
+
+        function checkKeyPress(event) {
+            const pressedKey = event.key.toUpperCase();
+
+            if (document.getElementById('gameBox').innerText === pressedKey) {
+                score++;
+            } else {
+                mistakes++;
+            }
+            
+        }
+
+    </script>
+
+</body>
+</html>

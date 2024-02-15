@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Contact us</title>
+    <link rel='stylesheet' href="/HTML&CSS/Day1/style/style.css">
+</head>
+<body>
+    <main>
+        <form id="registrationForm" onsubmit="showPreview()">
+
+            <fieldset>
+                <legend>Account Information</legend>
+                <label for="username">Username*</label>
+                <input type="text" id="username" name="username" >
+                <br>
+                <label for="password">Password*</label>
+                <input type="password" id="password" name="password" >
+                <br>
+                <label for="confirmPassword">Confirm Password*</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" >
+                <br>
+                <label for="creditCardNo">Credit Card No*</label>
+                <input type="text" id="creditCardNo" name="creditCardNo" >
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" >
+                <br>
+    
+                <label for="dob">Date of Birth*</label>
+                <input type="date" id="dob" name="dob" >
+                <br>
+    
+                <label for="favColor">Favorite Color*</label>
+                <input type="color" id="favColor" name="favColor" >
+                <br>
+    
+                <label for="profilePhoto">Profile Photo</label>
+                <input type="file" id="profilePhoto" name="profilePhoto">
+                <br>
+    
+                <label for="favBrowser">Favorite Browser</label>
+                <input type="text" id="favBrowser" name="favBrowser">
+                <br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Company Information</legend>
+                <label for="numEmployees">No. of Employees</label>
+                <input type="number" id="numEmployees" name="numEmployees">
+                <br>
+    
+                <label for="estimatedRevenue">Estimated Revenue</label>
+                <input type="range" id="estimatedRevenue" name="estimatedRevenue">
+                <br>
+            </fieldset>
+    
+
+            <fieldset>
+                <legend>Contact Information</legend>
+                <label for="email">Email Address(es)</label>
+                <input type="email" id="email" name="email">
+                <br>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone">
+                <br>
+                <label for="website">Website URL</label>
+                <input type="url" id="website" name="website">
+                <br>
+            </fieldset>
+    
+
+            <fieldset>
+                <button type="submit">Submit</button>
+                <button type="button" onclick="cancelForm()">Cancel</button>
+            </fieldset>
+        </form>
+        <script src="/HTML&CSS/Day5/scripts/lab1.js"></script>
+    </main>
+
+</body>

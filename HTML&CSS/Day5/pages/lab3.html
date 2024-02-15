@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Login Form</title>
+    <script src="/HTML&CSS/Day5/scripts/cookieLibrary.js"></script>
+</head>
+<body>
+
+<h1>Login</h1>
+
+<form id="loginForm" onsubmit="login(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" value="" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <label for="rememberMe">Remember Me:</label>
+    <input type="checkbox" id="rememberMe" name="rememberMe">
+    
+    <button type="submit">Login</button>
+</form>
+
+<script>
+    function login(event) {
+        event.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+        const rememberMe = document.getElementById('rememberMe').checked;
+
+        if (rememberMe) {
+            setCookie('username', username, new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)); // 7-day expiration
+        }
+
+        alert(`Logged in as ${username}`);
+    }
+
+    window.onload = function() {
+        const rememberedUsername = getCookie('username');
+        if (rememberedUsername) {
+            document.getElementById('username').value = rememberedUsername;
+        }
+    };
+</script>
+
+</body>
+</html>

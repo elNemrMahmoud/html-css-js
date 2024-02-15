@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lab2</title>
+    <script src='/HTML&CSS/Day3/resources/lab2.js'></script>
+</head>
+<body>
+    <div>
+        <p>Enter a sentence to split into words:</p>
+        
+        <label for="inputSentence">Input Sentence:</label>
+        <input type="text" id="inputSentence" placeholder="Enter sentence">
+        
+        <label for="splitCharacter">Split Character:</label>
+        <input type="text" id="splitCharacter" placeholder="Split character">
+
+        <button onclick="splitAndDisplay()">Split</button>
+    </div>
+
+    <div>
+        <p>The sentence split into words is:</p>
+        
+        <textarea id="resultTextArea" rows="4" cols="50" readonly></textarea>
+    </div>
+
+    <div>
+        <p>The first 10 characters of the input string are:</p>
+        <p id="firstTenCharacters"></p>
+    </div>
+</body>
+</html>

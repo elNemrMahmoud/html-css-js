@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Lab1</title>
+    <script src='/HTML&CSS/Day3/resources/lab1.js'></script>
+</head>
+<body>
+    
+    <h1>The string to search is:</h1>
+    
+    <label for="inputText">Enter Text:</label>
+    <textarea id="inputText" rows="4" cols="50"></textarea>
+    
+    <br>
+
+    <label for="searchText"></label>
+    <input type="text" id="searchText" placeholder="Search text">
+    
+    <label for="searchIndex">Search Index:</label>
+    <input type="number" id="searchIndex" placeholder="Index">
+    
+    <button onclick="searchAndDisplay()">Search</button>
+    
+    <div id="resultSection">
+        <p>First occurrence located at index: <span id="firstOccurrenceIndex"></span></p>
+        <p>Last occurrence located at index: <span id="lastOccurrenceIndex"></span></p>
+        <p>First occurrence from your index located at index: <span id="firstOccurrenceFromIndex"></span></p>
+        <p>Last occurrence from your index located at index: <span id="lastOccurrenceFromIndex"></span></p>
+    </div>
+</body>
+</html>
