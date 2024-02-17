@@ -10,4 +10,12 @@ form label{
     display: block;
     
 }
+table{
+    margin: 15px;
+    border-collapse: collapse;
+}
+td,th{
+    padding: 5px;
+    border: 1px solid black;
+}
 

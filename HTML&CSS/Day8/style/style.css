@@ -1,0 +1,20 @@
+.ui-input-text {
+  width: 250px !important; /* Adjust for all inputs */
+}
+.ui-field-contain button {
+  width: 100px !important;
+}
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.image-container {
+    background-image: url("/HTML&CSS/Day8/resources/icons8-user-80.png");
+    background-size: 250px 250px; /* Set fixed size */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    width: 250px; /* Ensure container matches image size */
+    height: 250px;
+  }

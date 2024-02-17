@@ -1,12 +1,13 @@
 //Employee Class
-function employee(id,firstname, lastname,birthday,department){
+function employee(id, firstname, lastname, birthday, department){
     this.id = id;
-    this.firstname=firstname;
-    this.lastname=lastname;
-    this.birthday=birthday;
-    this.department=department;
+    this.firstname = firstname;
+    this.lastname = lastname;
+    this.birthday = birthday;
+    this.department = department;
 
     this.getAge = function(){
+        
 
     };
 
@@ -32,6 +33,7 @@ function add(){
     var emp = new employee(++id,fname,lname,birthday,department);
     //Add data to employee object
     employees.push(emp);
+    
     //push data to array
 }
 function remove(){
@@ -42,6 +44,10 @@ function edit(){
 
 }
 
-function drawTable(){
+function display(employee){
+    var id = employee.id;
+    var fullname = employee.fullName();
+    var age = employee.getAge();
+     department = employee.department;
     
 }

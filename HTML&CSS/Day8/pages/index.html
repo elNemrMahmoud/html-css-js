@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PhoneBook Application</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="/HTML&CSS/Day8/style/style.css"
+    />
+    <script src="/Day8/script/lab1.js"></script>
+
+    <!--Jquery & JQuery Mobile-->
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  </head>
+  <body>
+    <!--Main Page-->
+    <section data-role="page" id="mainPage">
+      <header data-role="header">
+        <a
+          data-icon="plus"
+          href="#addContact"
+          data-transition="flip"
+          data-role="button"
+          >Add</a
+        >
+        <h1>Phonebook Application</h1>
+      </header>
+      <ul
+        data-role="listview"
+        data-split-icon="phone"
+        data-split-theme="d"
+        data-filter="true"
+        data-filter-placeholder="Search Contacts..."
+        data-inset="true"
+      >
+        <li>
+          <a href="#contactPage">
+            <img src="/HTML&CSS/Day8/resources/icons8-user-80.png" />
+            <h2>Hamda</h2>
+          </a>
+          <a
+            href="#call"
+            data-rel="popup"
+            data-position-to="window"
+            data-transition="pop"
+            >Purchase album</a
+          >
+        </li>
+        <li>
+          <a href="#contactPage">
+            <img src="/HTML&CSS/Day8/resources/icons8-user-80.png" />
+            <h2>Mahmoud</h2>
+          </a>
+          <a
+            href="#call"
+            data-rel="popup"
+            data-position-to="window"
+            data-transition="pop"
+            >Purchase album</a
+          >
+        </li>
+        <li>
+          <a href="#contactPage">
+            <img src="/HTML&CSS/Day8/resources/icons8-user-80.png" />
+            <h2>Marwan</h2>
+          </a>
+          <a
+            href="#call"
+            data-rel="popup"
+            data-position-to="window"
+            data-transition="pop"
+            >Purchase album</a
+          >
+        </li>
+      </ul>
+
+      <!--Call Popup-->
+      <div
+        data-role="popup"
+        id="call"
+        data-theme="a"
+        data-overlay-theme="b"
+        class="ui-content"
+        style="max-width: 340px; padding-bottom: 2em"
+      >
+            
+        <h3>Call Friend</h3>
+        <p>Your Call will begin as soon as you click accept</p>
+            <a
+          href="index.html"
+          data-rel="back"
+          class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini"
+          >Call</a
+        >
+            <a
+          href="index.html"
+          data-rel="back"
+          class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini"
+          >Cancel</a
+        >
+      </div>
+
+      <footer data-role="footer">
+        <h1>Hello this is a footer</h1>
+      </footer>
+    </section>
+
+    <!--------------------------------Add Contact Page----------------------------->
+    <section data-role="page" id="addContact" data-add-back-btn="true">
+      <header data-role="header">
+        <h1>Add Contact</h1>
+      </header>
+
+      <form>
+        <div data-role="fieldcontain">
+          <label for="username">Name:</label>
+          <input type="text" name="username" id="username" required  placeholder="Username"/>
+        </div>
+        <div data-role="fieldcontain">
+          <label for="phone">Phone:</label>
+          <input type="tel" name="phone" id="phone" value="" placeholder="(202) 555-5555"/>
+        </div>
+        <div data-role="fieldcontain">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" required  placeholder="Email"/>
+        </div>
+        <div data-role="fieldcontain">
+          <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+                <legend>Gender</legend>
+                    <input type="radio" name="radio-choice-b" id="radio-choice-c" value="list" checked="checked">
+                    <label for="radio-choice-c">Male</label>
+                    <input type="radio" name="radio-choice-b" id="radio-choice-d" value="grid">
+                    <label for="radio-choice-d">Female</label>
+            </fieldset>
+          </select>
+        </div>
+
+        <div class="button-row">
+          <button class="fixed-width-button" type="button" data-theme="b" data-icon="check">Save</button>
+          <button type="button" data-theme="c" data-icon="delete">Cancel</button>
+        </div>
+      </form>
+
+      <footer data-role="footer">
+        <h1>Hello this is a footer</h1>
+      </footer>
+    </section>
+        <!--------------------------------Contact Page----------------------------->
+        <section data-role="page" id="contactPage" data-add-back-btn="true">
+          <header data-role="header">
+            <h1>Contact Name</h1>
+          </header>
+          <div class="image-container"></div>
+          <a href="#delete" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-left"></a>
+          <a href="#addContact" class="ui-btn ui-btn-inline ui-icon-edit ui-btn-icon-left"></a>
+          <a href="#calll" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-btn-inline ui-icon-phone ui-btn-icon-left"></a>
+          <footer data-role="footer">
+            <h1>Hello this is a footer</h1>
+          </footer>
+                <!--Call Popup-->
+      <div
+      data-role="popup"
+      id="calll"
+      data-theme="a"
+      data-overlay-theme="b"
+      class="ui-content"
+      style="max-width: 340px; padding-bottom: 2em"
+    >
+          
+      <h3>Call Friend</h3>
+      <p>Your Call will begin as soon as you click accept</p>
+          <a
+        href="index.html"
+        data-rel="back"
+        class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini"
+        >Call</a
+      >
+          <a
+        href="index.html"
+        data-rel="back"
+        class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini"
+        >Cancel</a
+      >
+    </div>
+
+    <div
+    data-role="popup"
+    id="delete"
+    data-theme="c"
+    data-overlay-theme="b"
+    class="ui-content"
+    style="max-width: 340px; padding-bottom: 2em">
+        
+    <h3>Delete Friend</h3>
+    <p>Are you sure you wish to delete friend</p>
+        <a
+      href="/Day8/pages/index.html"
+      data-rel="back"
+      class="ui-shadow ui-btn ui-corner-all ui-btn-b ui-icon-check ui-btn-icon-left ui-btn-inline ui-mini"
+      >Delete</a
+    >
+        <a
+      href="index.html"
+      data-rel="back"
+      class="ui-shadow ui-btn ui-corner-all ui-btn-inline ui-mini"
+      >Cancel</a
+    >
+  </div>
+
+ </section>
+  </body>
+</html>
